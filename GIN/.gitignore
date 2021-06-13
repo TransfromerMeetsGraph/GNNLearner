@@ -24,9 +24,3 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# VSCode project settings
-/.vscode/
-
-# PyCharm project settings
-/.idea/
-
