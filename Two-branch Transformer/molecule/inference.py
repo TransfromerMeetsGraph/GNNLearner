@@ -32,7 +32,8 @@ def main(dataset, cktpath, subset, args):
     results = roberta.inference(split=subset)
     for i, output in enumerate(results):
         output = output.tolist()
-        savedir = "/blob/v-jinhzh/model/pretrainmol/checkpoints/kddcup/pred"
+        savedir = "/tmp/kddcup/pred"
+        os.makedirs(savedir, exist_ok=True)
         savefn = os.path.join(
             blob_path(savedir), "byol.{}.pred.{}.{}".format(model_name[i], args.suffix, subset)
         )

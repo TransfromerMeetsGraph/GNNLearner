@@ -1,4 +1,4 @@
-This repository contains our solution for the PCQM4M-LSC track of the OGB-LSC. The code is originally forked from [Fairseq](https://github.com/pytorch/fairseq).
+This repository contains our solution of two branch Transformer for the PCQM4M-LSC track of the OGB-LSC. The code is originally forked from [Fairseq](https://github.com/pytorch/fairseq).
 
 # Requirements and Installation
 The Dockerfile is [provided](./Dockerfile), and you can use it with `docker build -t pretrainmol .`.
@@ -8,8 +8,8 @@ The Dockerfile is [provided](./Dockerfile), and you can use it with `docker buil
 
 To install the code from source
 ```shell
-git clone 
-cd 
+git clone https://github.com/TransfromerMeetsGraph/GNNLearner
+cd GNNLearner/Two-branch\ Transformer/
 pip install -e . 
 ```
 # Getting Started
@@ -100,18 +100,17 @@ You can cat all dev set into training set, and preprocess and train your model a
 
 
 ## Our pre-trained model 
-Our models are released at [OneDrive](https://mailustceducn-my.sharepoint.com/:f:/g/personal/teslazhu_mail_ustc_edu_cn/Emvau85Qcv9NowWIrR3d5HEBb9dxu3B-xxkR2Na5sX60MQ?e=ANOKi3).
+Our models are released at [Onedrive](https://mailustceducn-my.sharepoint.com/:f:/g/personal/teslazhu_mail_ustc_edu_cn/Emvau85Qcv9NowWIrR3d5HEBidQuh8sH9yOcgoAdqdd-Ag?e=YgHdN9)/Two-branch Transformer.
 
-Model | Description | # params | Dataset | Model 
---- | --- | --- | --- | ---
-clsreg- on official | trained by jinhua | 200M |  [links](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/model/jh?csf=1&web=1&e=4e9F1g) | 
-clsreg-on kfold| |200m | | 
-clsreg on all data | | 200M|[data](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/dataset/bindatadev?csf=1&web=1&e=LL3ql6)|[model](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/model/jh?csf=1&web=1&e=HF656W)
+ Description | # params | Dataset | Model 
+ --- | --- | --- | ---
+Models trained on k-fold dev set|200M | [data](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/Two-branch%20Transformer/dataset?csf=1&web=1&e=gvGHbL)/bindatadev(a/b/c/d) | [models](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/Two-branch%20Transformer/k-fold?csf=1&web=1&e=fzy5vG)
+Models trained on all dev set| 200M|[data](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/Two-branch%20Transformer/dataset/bindatadev?csf=1&web=1&e=Phaf00)|[models](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/Two-branch%20Transformer/all-dev?csf=1&web=1&e=0IVwsc)
 
 
-You can re-produce our number with 
+By downloading the binarized data and pre-trained models, you can re-produce our scores with 
 ```shell 
-python molecule/inerence.py $checkpoint --dataset $dataset_path
+python molecule/inerence.py $model --dataset $data
 ```
 
 
