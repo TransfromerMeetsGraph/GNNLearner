@@ -59,7 +59,7 @@ fairseq-train ./data/data_bin \
     --encoder-ffn-embed-dim 3072 \
     --encoder-attention-heads 12 \
     --max-positions 512 \
-    --criterion sentence_prediction_l1_criterion \
+    --criterion sentence_prediction_custom_criterion \
     --regression-target \
     --best-checkpoint-metric loss \
     --num-classes 1 \
