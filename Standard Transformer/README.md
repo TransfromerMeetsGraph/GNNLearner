@@ -2,7 +2,7 @@
 The standard Transformer models are trained on the [Fairseq toolkit](https://github.com/pytorch/fairseq).
 
 ## Environment.
-The Docker can be pulled from: `apeterswu/fairseq_master:2021-5`, `docker pull apeterswu/fairseq_master:2021-5`.
+The Docker can be pulled from: `apeterswu/fairseq_master:2021-5`, run `docker pull apeterswu/fairseq_master:2021-5`.
 
 It builds the Pytorch (version == 1.6.0), Python (version == 3.7), and Fairseq (version == 0.10.2).
 
