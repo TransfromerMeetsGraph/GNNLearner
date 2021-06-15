@@ -11,8 +11,8 @@ from fairseq import metrics, utils
 from fairseq.criterions import FairseqCriterion, register_criterion
 
 
-@register_criterion("sentence_prediction_l1_criterion")
-class SentencePredictionL1Criterion(FairseqCriterion):
+@register_criterion("sentence_prediction_custom_criterion")
+class SentencePredictionCustomCriterion(FairseqCriterion):
     def __init__(self, task, classification_head_name, regression_target):
         super().__init__(task)
         self.classification_head_name = classification_head_name
