@@ -1,11 +1,24 @@
 # GNNLearner
 
-Solution of KDD cup 2021
+## Introduction
+In this repo, we provide our solution to KDD cup 2021. We use three types of models:
 
-We provided code in three sub-directories: GIN containing code on GIN networks, standard Transformer containing code on standard Transformer networks, and Two-branch Transformer containing code on two-branch Transformer. Our last submission is ensembled on these three networks. Please see corresponding README in each folder for more details.
+- GIN network, which is the GIN with virtual nodes. The code is in the folder `GIN`; 
+- Standard Transformer, which is the same as that in NLP. The code is in the folder `Standard Transformer`;
+- Two-branch Transformer, which is a variant of Transformer with a regression branch and a classification branch. The code is in the folder `Two-branch Transformer`.
 
-Our pre-trained models are released on [Onedrive](https://mailustceducn-my.sharepoint.com/:f:/g/personal/teslazhu_mail_ustc_edu_cn/Emvau85Qcv9NowWIrR3d5HEBidQuh8sH9yOcgoAdqdd-Ag?e=YgHdN9). Our all prediction are released at [final_v0](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/final_v0?csf=1&web=1&e=WjNhqX). If you want to reproduce our results, go each subdirectory and follow the instructions. Last, by running [average.py](./average.py), you can merge all prediction.
+Please refer to the README in each folder for more details.
 
-Some data processing steps are shown in [DataProcessing](./DataProcessing/README.md) folder.
+## Pre-trained checkpoints and predictions
+Our pre-trained models are released on [Onedrive](https://mailustceducn-my.sharepoint.com/:f:/g/personal/teslazhu_mail_ustc_edu_cn/Emvau85Qcv9NowWIrR3d5HEBidQuh8sH9yOcgoAdqdd-Ag?e=YgHdN9). 
 
+Our all prediction are released at [final_v0](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/final_v0?csf=1&web=1&e=WjNhqX). 
+
+If you want to reproduce our results, go each subdirectory and follow the instructions to reconstruct the results. After that,  by running [average.py](./average.py), you can merge all predictions of each type of model.
+
+
+## Data processing
+The data processing steps are shown in [DataProcessing](./DataProcessing/README.md) folder.
+
+## Paper
 For technique details, see this [paper](./paper.pdf).
