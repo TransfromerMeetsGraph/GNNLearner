@@ -1,7 +1,7 @@
 This repository contains our solution of two branch Transformer for the PCQM4M-LSC track of the OGB-LSC. The code is originally forked from [Fairseq](https://github.com/pytorch/fairseq).
 
 # Requirements and Installation
-The Dockerfile is [provided](./Dockerfile), and you can use it with `docker build -t pretrainmol .`.
+The Dockerfile is [provided](./Dockerfile), and you can use it with `docker build -t pretrainmol .`. You can also pull an image from Dockerhub with `docker pull teslazhu/pretrainmol36:latest`.
 * [PyTorch](http://pytorch.org/) version == 1.8.0
 * PyTorch Geometric version == 1.6.3
 * RDKit version == 2020.09.5
@@ -84,7 +84,7 @@ fairseq-train $DATADIR \
     --pooler-dropout 0 --relu-dropout 0 \
     --datatype tt --scaler-label --use-byol
 ```
-### inference 
+### Inference 
 ```shell 
 cktpath=/yourcktpath
 DATADIR=${BINDIR}
@@ -100,7 +100,7 @@ You can cat all dev set into training set, and preprocess and train your model a
 
 
 ## Our pre-trained model 
-Our models are released at [Onedrive](https://mailustceducn-my.sharepoint.com/:f:/g/personal/teslazhu_mail_ustc_edu_cn/Emvau85Qcv9NowWIrR3d5HEBidQuh8sH9yOcgoAdqdd-Ag?e=YgHdN9)/Two-branch Transformer.
+Our models are released at [Onedrive/Two-branch Transformer](https://mailustceducn-my.sharepoint.com/:f:/r/personal/teslazhu_mail_ustc_edu_cn/Documents/share/public/kddcup/Two-branch%20Transformer?csf=1&web=1&e=Xkw9dW).
 
  Description | # params | Dataset | Model 
  --- | --- | --- | ---
@@ -110,8 +110,9 @@ Models trained on all dev set| 200M|[data](https://mailustceducn-my.sharepoint.c
 
 By downloading the binarized data and pre-trained models, you can re-produce our scores with 
 ```shell 
-python molecule/inerence.py $model --dataset $data
+python molecule/inerence.py $model --dataset $data --subset valid/test
 ```
+
 
 
 
