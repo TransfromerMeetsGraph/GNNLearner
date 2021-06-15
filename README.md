@@ -18,7 +18,7 @@ If you want to reproduce our results, go each subdirectory and follow the instru
 
 
 ## Data processing
-The data processing steps are shown in [DataProcessing](./DataProcessing/README.md) folder.
+The data processing steps are shown in [DataPreprocessing](./DataPreprocessing/README.md) folder.
 
 ## Paper
 For technique details, see this [paper](./paper.pdf).
